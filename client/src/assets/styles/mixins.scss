@@ -1,0 +1,36 @@
+//MIXINS:
+
+//MEDIA QUERY MANAGER
+/*
+
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Standart pc
+1800px + :      Big pc
+
+$breakpoint argument choices:
+-   tab-port
+-   tab-land
+-   standard-pc
+-   big-pc
+
+1em = 16px
+
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == tab-port {
+        @media (min-width: 37.5em) { @content };     //600px
+    }
+    @if $breakpoint == tab-land {
+        @media (min-width: 56.25em) { @content };    //900px
+    }
+    @if $breakpoint == standard-pc {
+        @media (min-width: 75em) { @content };       //1200px
+    }
+    @if $breakpoint == big-pc {
+        @media (min-width: 112.5em) { @content };    //1800px
+    }
+}
+

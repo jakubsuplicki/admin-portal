@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 87.5%; // <-- 14px
+}
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+h3, h4, h5{
+  font-size: 1rem;
+  font-weight: 500;
+}
+label {
+  &:focus {
+    outline: none;
+  }
+}
+b { 
+  font-weight: 600;
+}
+input,
+textarea,
+button,
+select,
+a {
+  font-size: 1rem;
+  outline: none;
+  border-radius: $radius-main;
+  padding: 0.8rem 0.8rem;
+}
+a {
+  color: $link;
+  text-decoration: none;
+}
+label {
+  outline: none;
+  color: $placeholder;
+  border-radius: $radius-main;
+}
+button {
+  box-shadow: $shadow-element;
+}
+input[type="radio"], label, button, select {
+  cursor: pointer;
+}
